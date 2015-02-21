@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/sirodoht/wetak",
   "engines": {
-    "node": "0.10.x",
+    "node": "0.12.x",
     "npm": "2.6.x"
   },
   "dependencies": {
