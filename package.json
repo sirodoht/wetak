@@ -18,6 +18,9 @@
     "url": "https://github.com/sirodoht/wetak/issues"
   },
   "homepage": "https://github.com/sirodoht/wetak",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "browserify": "^9.0.3",
     "express": "^4.11.2",
