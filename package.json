@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sirodoht/wetak/issues"
   },
-  "homepage": "https://github.com/sirodoht/wetak"
+  "homepage": "https://github.com/sirodoht/wetak",
+  "dependencies": {
+    "express": "^4.11.2"
+  }
 }
