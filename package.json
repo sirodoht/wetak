@@ -18,7 +18,8 @@
   "homepage": "https://github.com/sirodoht/wetak",
   "dependencies": {
     "browserify": "^9.0.3",
-    "express": "^4.11.2"
+    "express": "^4.11.2",
+    "jade": "^1.9.2"
   },
   "devDependencies": {
     "gulp": "^3.8.11",
