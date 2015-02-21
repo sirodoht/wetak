@@ -1,0 +1,20 @@
+{
+  "name": "wetak",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sirodoht/wetak",
+  "authors": [
+    "Theodore Keloglou <theodorekeloglou@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
