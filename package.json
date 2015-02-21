@@ -4,6 +4,7 @@
   "description": "Wannabe solver of linear problems",
   "main": "app.js",
   "scripts": {
+    "start": "node back/app.js",
     "test": ""
   },
   "repository": {
