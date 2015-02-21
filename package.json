@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sirodoht/wetak",
   "dependencies": {
+    "bootstrap": "^3.3.2",
     "express": "^4.11.2"
   },
   "devDependencies": {
