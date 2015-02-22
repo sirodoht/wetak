@@ -12,7 +12,10 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
 
   // back watch
-  gulp.watch(['back/app.js'], ['serve']);
+  gulp.watch(['back/app.js'], ['serve'])
+    .on('change', function(event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
 
   // browserify watch
   gulp.watch('front/scripts/*.js', ['browserify'])
