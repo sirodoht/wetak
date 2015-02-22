@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-express": "^0.1.13"
+    "gulp-express": "^0.1.13",
+    "gulp-util": "^3.0.3",
+    "vinyl-source-stream": "^1.0.0"
   }
 }
