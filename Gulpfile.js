@@ -10,7 +10,15 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
+
+  // back watch
   gulp.watch(['back/app.js'], ['serve']);
+
+  // browserify watch
+  gulp.watch('front/scripts/*.js', ['browserify'])
+    .on('change', function(event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
 });
 
 gulp.task('browserify', function() {
