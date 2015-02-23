@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+// middleware for JSON POST body data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -22,6 +23,7 @@ app.get('/', function(req, res) {
 app.post('/parse', function(req, res) {
   res.send(req.body.dataString);
   console.log(req.body);
+  // parse dataString and return JSON obj
 });
 
 var server = app.listen(app.get('port'), function() {
