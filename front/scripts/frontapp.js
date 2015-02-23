@@ -1,9 +1,9 @@
 /**
  * @fileOverview The frontpage app
  */
+
 // require jQuery: not needed, loads from script tag from cnd
 // require('../static/components/jquery/dist/jquery.js');
-
 
 var frontapp = module.exports = {};
 
@@ -12,19 +12,20 @@ var frontapp = module.exports = {};
  */
 frontapp.init = function() {
 
-  console.log($('#input'));
-  console.log($('#input').val());
-  var dataString = $('#input').val();
+  var dataString = $('#input').val().replace(/\n/g, '|');
+  console.log('This stuff will be POSTed:', dataString);
 
   $('#submit').click(function(event) {
     $.ajax({
       type: "POST",
       url: '/parse',
-      data: dataString,
-      success: function() {
-        console.log('Success?');
+      data: {
+        dataString: dataString
       },
-      dataType: 'text'
+      success: function() {
+        console.log('Success');
+      },
+      dataType: 'json'
     });
   });
 };
