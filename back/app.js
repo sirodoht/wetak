@@ -5,6 +5,9 @@ var bodyParser = require('body-parser');
 var app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -13,8 +16,8 @@ app.get('/', function(req, res) {
 });
 
 app.post('/parse', function(req, res) {
-  res.send(req.body);
-  console.log(req.body.dataString);
+  res.send(req.body.dataString);
+  console.log(req.body);
 });
 
 var server = app.listen(app.get('port'), function() {
