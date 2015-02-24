@@ -5,6 +5,19 @@
 var parse = module.exports = {};
 
 /**
+ * Throws syntax error
+ * @param  {String} msg The syntax error message
+ */
+parse.error = function(msg) {
+  throw {
+    name: 'SyntaxError',
+    message: msg,
+    at: at,
+    text: text
+  };
+}
+
+/**
  * Parse the 'min' or 'max' string
  * @param  {String} minMaxString The string which will contain either 'min' or 'max'
  */
