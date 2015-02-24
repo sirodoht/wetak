@@ -6,6 +6,8 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 
+var parse = require('./parse');
+
 var app = express();
 
 // middleware for JSON POST body data
