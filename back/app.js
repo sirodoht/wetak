@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
 app.post('/parse', function(req, res) {
   res.send(req.body.dataString);
   console.log(req.body);
-  // parse dataString and return JSON obj
+  parse.lpParser(req.body.dataString);
 });
 
 var server = app.listen(app.get('port'), function() {
