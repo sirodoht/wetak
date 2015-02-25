@@ -18,6 +18,24 @@ parse.error = function(msg) {
 }
 
 /**
+ * Returns next character to be parsed
+ * @param  {String}   character Character expected to be parsed
+ */
+parse.next = function(character) {
+
+  // If a c parameter is provided, verify that it matches the current character.
+  if (character && character !== parse.ch) {
+    error('Expected \'' + character + '\' instead of \'' + parse.ch + '\'');
+  }
+
+  // Get the next character. When there are no more characters,
+  // return the empty string.
+  ch = parse.dataString.charAt(parse.at);
+  at += 1;
+  return parse.ch;
+}
+
+/**
  * Parse the 'min' or 'max' string
  * @param  {String} minMaxString The string which will contain either 'min' or 'max'
  */
