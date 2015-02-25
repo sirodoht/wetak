@@ -12,8 +12,8 @@ parse.error = function(msg) {
   throw {
     name: 'SyntaxError',
     message: msg,
-    at: at,
-    text: text
+    at: parse.at,
+    text: parse.dataString
   };
 }
 
@@ -25,13 +25,13 @@ parse.next = function(character) {
 
   // If a c parameter is provided, verify that it matches the current character.
   if (character && character !== parse.ch) {
-    error('Expected \'' + character + '\' instead of \'' + parse.ch + '\'');
+    parse.error('Expected \'' + character + '\' instead of \'' + parse.ch + '\'');
   }
 
   // Get the next character. When there are no more characters,
   // return the empty string.
   parse.ch = parse.dataString.charAt(parse.at);
-  at += 1;
+  parse.at += 1;
 }
 
 /**
@@ -40,18 +40,18 @@ parse.next = function(character) {
  */
 parse.parseMinMax = function(minMaxString) {
 
-  next('m')
+  parse.next('m')
   switch(parse.ch) {
     case 'i':
-      next('i');
-      next('n');
+      parse.next('i');
+      parse.next('n');
       return 1;
     case 'a':
-      next('a');
-      next('x');
+      parse.next('a');
+      parse.next('x');
       return -1;
   }
-  error('Unexpected \'' + parse.ch + '\'');
+  parse.error('Unexpected \'' + parse.ch + '\'');
 
 };
 
