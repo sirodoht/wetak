@@ -88,8 +88,11 @@ parse.parseConstants = function(numArray, signArray, string) {
  */
 parse.lpParser = function(dataString) {
 
-  var at; // current index
-  var ch; // current character
+  parse.dataString = dataString; // string to be parsed
 
+  parse.at = 0; // current index
+  parse.ch = parse.dataString.charAt(parse.at); // current character
+
+  parse.parseMinMax(parse.dataString);
 
 };
