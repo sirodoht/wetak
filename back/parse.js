@@ -59,15 +59,15 @@ parse.parseMinMax = function(minMaxString) {
  * Parse coefficients
  * @param  {Array} coeffList An array for storing coeeficients
  * @param  {String} monomial  The monomial which will be destructured into its coeffs
+ *
+ * Check which pattern matches. Valid are: (s)(n)lv
+ * parenthesis indicate optional existence
+ * s is + or - (absence means +)
+ * n is a number (coefficient, absence means 1)
+ * l is a lowercase latin letter (variable letter)
+ * v is a number, probably incremental (variable number)
  */
 parse.parseCoeffs = function(coeffList, monomial) {
-
-  // Check which pattern matches. Valid are: (s)(n)lv
-  // parenthesis indicate optional existence
-  // s is + or - (absence means +)
-  // n is a number (coefficient, absence means 1)
-  // l is a lowercase latin letter (variable letter)
-  // v is a number, probably incremental (variable number)
 
 };
 
