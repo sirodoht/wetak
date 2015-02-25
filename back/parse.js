@@ -30,9 +30,8 @@ parse.next = function(character) {
 
   // Get the next character. When there are no more characters,
   // return the empty string.
-  ch = parse.dataString.charAt(parse.at);
+  parse.ch = parse.dataString.charAt(parse.at);
   at += 1;
-  return parse.ch;
 }
 
 /**
