@@ -40,6 +40,19 @@ parse.next = function(character) {
  */
 parse.parseMinMax = function(minMaxString) {
 
+  next('m')
+  switch(parse.ch) {
+    case 'i':
+      next('i');
+      next('n');
+      return 1;
+    case 'a':
+      next('a');
+      next('x');
+      return -1;
+  }
+  error('Unexpected \'' + parse.ch + '\'');
+
 };
 
 /**
